@@ -17,7 +17,7 @@ Once you're done, remove this section from the README. Good luck! 💪
 
 ---
 
-![](./assets/vimably-github-1280-640.jpg)
+![](./assets/ably-mqtt-vim-banner.svg)
 
 *// Place eye candy header image here ⬆️*
 
