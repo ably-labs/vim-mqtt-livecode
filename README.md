@@ -17,7 +17,7 @@ Once you're done, remove this section from the README. Good luck! 💪
 
 ---
 
-![Place eye candy header image here](https://placekitten.com/640/360)
+![](./assets/vimably-github-1280-640.jpg)
 
 *// Place eye candy header image here ⬆️*
 
