@@ -18,6 +18,22 @@ Since we all work at Ably we know that using our network mitigates this necessit
 
 ![](./assets/summary-illustration.svg)
 
+
+## Innovation day conclusion
+
+(set up what live coding is for non-tech heads - multiple users can congregate and edit source code simultaneously, like Google docs does, except instead of google docs the users would use VIM - the text editor extraordinaire!)
+
+We tested MQTT in nvim and it worked with little effort, so our intention at the offset was to use that as the message carriers. Which would set our project apart from the other similar project that have done a collaborative buffer sharing.
+
+Then we tried to implement that in the existing plug in and where unable to get it threading. We couldn't run the MQTT client on the main thread because they use a different event-loop concurrency frameworks. This was a blocker for this approach with so little time on the clock.
+
+So we decided to return to the Web-socket approach, with the intention to connect to Ably that way and discovered that their client is a hand-rolled TCP implementation of Web-socket using LUA. Which mean there was not "easy" way to replace it with Ably.
+
+We tried a few other hacks and came to the conclusion that our objective is a achievable, but would require much more development time.
+
+We would like to propose that hackathons/innovation day projects consider a full week. In our case, the first 2 days where investigation, and served to expose the problem but loft not much time to create a suitable solution.
+
+
 ## Building & running locally
 
 - First you need to add `ABLY_API_KEY_LIVECODE` to your environment, to get a key [sign up for FREE account](https://ably.com/sign-up)
