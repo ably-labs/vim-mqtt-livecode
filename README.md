@@ -23,6 +23,10 @@ Since we all work at Ably we know that using our network mitigates this necessit
 
 (set up what live coding is for non-tech heads - multiple users can congregate and edit source code simultaneously, like Google docs does, except instead of google docs the users would use VIM - the text editor extraordinaire!)
 
+At our initial meeting we looked at some existing vim plugin projects and how they do it, and decided to approach the problem from a unique angle.
+
+Where all of the projects used Websockts to exchange messages between the users, we want to use MQTT, for two reasons. Typically the libraries have a very small foot print, since they are often used in IoT devices, and because Ably has an MQTT endpoint.
+
 We tested MQTT in nvim and it worked with little effort, so our intention at the offset was to use that as the message carriers. Which would set our project apart from the other similar project that have done a collaborative buffer sharing.
 
 Then we tried to implement that in the existing plug in and where unable to get it threading. We couldn't run the MQTT client on the main thread because they use a different event-loop concurrency frameworks. This was a blocker for this approach with so little time on the clock.
